@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Programming Notes"
+title                    : "Dana's Programming Notes"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Dana"
@@ -96,11 +96,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Dana"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "From data analysis to web programming"
+  location         : "Seoul"
+  email            : "ryudana@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
