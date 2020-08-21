@@ -107,10 +107,10 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
-      # url: "https://www.linkedin.com/in/jiwon-yu-96303210b/"
+      url: "https://www.linkedin.com/in/jiwon-yu-96303210b/"
     - label: "Online Resume"
       icon: "fas fa-fw fa-link"
-      # url: "https://dana-resume.github.io/"
+      url: "https://dana-resume.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -119,10 +119,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/letsgititdana/"
+      url: "https://github.com/letsgititdana/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/ryuvelyy"
 
 # Site Footer
 footer:
