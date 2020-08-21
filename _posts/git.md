@@ -85,9 +85,67 @@ $ git pull origin master
 
 
 
+## Github Collaborating
+
+### (1) Push & Pull
+
+- Git 협업 -> 독재 (무조건 contributor 초대가 필요함)
+
+### (2) Fork & Pull Request
+
+- 초대 필요 X -> 주로 Open source 프로젝트에 많이 쓰임
+- 내 리포로 Fork 해온다음 다시 Push 하세요. 
+- Original Repo에 구걸하세요. *"제발 내 repo를 pull 해 주세요..."*
+
+### (3) Shared repository (branch and merge)
+
+- 실제 현업에서 쓰임. 중요!!! 
+- master branch에서 **절대. 직접.** 코딩하지 않는다!!
+
+**Git Flow & Github Flow **
+
+```bash
+$ git branch slave1(name)
+$ git branch
+$ git checkout slave1
+$ touch b.txt
+$ git add .
+$ git commit -m "Add b.txt"
+$ git log --oneline
+// 커밋 상태를 보면, slave1에는 b.txt가 있고 master에는 아직 없음!!! 
+$ git checkout master
+$ git branch -D slave1
+
+$ git branch jiwon
+$ git checkout jiwon
+$ touch c.txt
+$ git add .
+$ git commit -m "Add c.txt"
+$ git checkout master
+$ git merge jiwon
+// 이제 master에도 c.txt가 있다.
+$ git branch -d jiwon
+
+
+$ git push origin jiwon-branch
+// 각자의 branch에 push해서 github에 branch 생성
+// 그 다음 Pull request를 master로 보낸다.
+// 그러면 이제 선임이 코드리뷰를 해서... 
+```
+
+- `checkout`은 과거를 보러갈때도, 다른 세계로 갈때도 쓰이네!
+- `branch -d` 는 비어있는 branch 삭제, `branch -D`는 not fully merged branch 삭제.
+- **branch 는 1회용이다!!!!!!!!!!!** *가지의 가지를 만들어라. 가지치기해라. 명심하자.* 
+
+
+
+![GitFlow](https://woowabros.github.io/img/2017-10-30/git-flow_overall_graph.png)
+
+
+
 ## Commit msg Conventions
 
-
+( To be studied ... )
 
 
 
