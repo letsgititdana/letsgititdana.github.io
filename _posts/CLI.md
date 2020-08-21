@@ -1,0 +1,87 @@
+# CLI
+
+Command Line Interface
+
+
+
+## GUI vs. CLI
+
+- GUI: Graphic User Interface
+- CLI: Command Line Interface
+
+
+
+## Basic Commands
+
+### (1) `pwd`
+
+- pwd: print working directory
+
+```bash
+$ pwd
+/c/Users/i
+```
+
+### (2) `ls`
+
+- ls: list files
+
+### (3) `cd`
+
+- cd []: change directory
+
+### (4) `cd ..`
+
+- cd ..: change to upper directory
+
+### (5) `mkdir`
+
+- mkdir []: make direction(folder)
+
+### (6) `touch`
+
+- touch []: make a file
+
+### (7) `echo`
+
+- echo: 'print()' in python
+
+```bash
+$ echo 'hello' > hello.txt
+```
+
+### (8) `vi`
+
+- vi []: view a file
+- `:q!` for forcequit
+
+### (9) `cp`
+
+- cp [] []: copy a file or folder
+
+```bash
+$ cp hello.txt hello1.txt
+```
+
+### (10) `rm`
+
+- `rm`: remove a file or folder
+- fun fact: `rm -rf/` for whom you hate 
+
+### (11) `-r`
+
+- `rm -r` or `cp -r folder1/ folder2`: make changes to folders
+- 'r' stands for 'recursive'
+
+### (12) `mv`
+
+- mv []: move **or** rename a file or folder
+- First move to the folder of destination, then bring in the file from the origin folder.
+
+```bash
+$ mv ~/Desktop/00_markdown_basic.md .
+```
+
+### (12) `tap`
+
+- `tap` for autotyping
