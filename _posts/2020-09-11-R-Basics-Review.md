@@ -1,3 +1,10 @@
+---
+title: "R BASICS REVIEW"
+date: 2020-09-11 10:45:00 -0400
+categories: R
+---
+
+
 # R Basics Review
 
 *R* is a *language* and environment for statistical computing and graphics.
