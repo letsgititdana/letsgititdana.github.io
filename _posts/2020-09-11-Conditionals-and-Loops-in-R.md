@@ -1,3 +1,9 @@
+---
+title: "CONDITIONALS AND LOOPS IN R"
+date: 2020-09-11 10:45:00 -0400
+categories: R
+---
+
 # Conditionals and Loops in R
 
 How to use control structures like If-Else statements, for loops, while loops in R
