@@ -1,3 +1,10 @@
+---
+title: "FUNCTION IN R"
+date: 2020-09-12 10:45:00 -0400
+categories: R
+---
+
+
 # Function in R
 
 R has a large number of in-built functions and the user can create their own functions.
