@@ -15,7 +15,7 @@ categories: R
 
 ## 1. Basic Data Types and Sets in R
 
-![image-20200911193826887](/Users/Dana/Library/Application Support/typora-user-images/image-20200911193826887.png)
+![R objects](Robjects.png)
 
 * **R's** basic data **types** are character, numeric, complex, and logical.
 
@@ -87,7 +87,7 @@ categories: R
     * functions: list(), unlist()
     * indexing: [ ], [[ ]], $
 
-  ![image-20200911200541093](/Users/Dana/Library/Application Support/typora-user-images/image-20200911200541093.png)
+  ![R List](Rlist.png)
 
   
 
@@ -99,7 +99,7 @@ categories: R
 
     
 
-![download](/Users/Dana/Desktop/download.png)
+![R Objects Visualization](Robjectspic.png)
 
 
 
