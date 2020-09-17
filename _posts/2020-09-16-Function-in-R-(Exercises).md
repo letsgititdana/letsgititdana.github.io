@@ -122,4 +122,4 @@ exam6(10,75,90,NA)
 
 
 ## More Exercise Codes on my github
-[github.com/letsgititdana](https://github.com/letsgititdana)
+[github.com/letsgititdana](https://github.com/letsgititdana/R_exercises)
