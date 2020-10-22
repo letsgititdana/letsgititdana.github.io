@@ -8,9 +8,11 @@ categories: crawling
 
 ## Web Crawling vs. Web Scraping (크롤링, 스크래핑 차이)
 > **Web crawling** is a way to get the information and organise it, while **web scraping** can get very specific data and store it for later use. Web scraping is about downloading structured data from web, selecting some of that data, and passing along what you selected to another process. 
+
 **크롤러**란 조직적, 자동화된 방법으로 월드와이드 웹을 탐색하는 컴퓨터 프로그램(위키백과)
 **크롤링**은 크롤러가 하는 작업을 부르는 말로, 여러 인터넷 사이트의 페이지를 수집해서 분류하는 것. 대체로 인덱싱하고 DB에 저장하는 과정까지 포함.
 **스크래핑**이란 HTTP를 통해 웹 사이트의 내용을 긁어다 원하는 형태로 가공하는 것. 크롤링 agent와 parser까지 포함하는 개념이라고 보면 됨.
+
 
 ## Web Crawling Libraries
 1. Urllib: Python package that collects several modules for working with URLs. It defines functions and classes to help in URL actions.
@@ -24,6 +26,7 @@ urllib.error # urllib.request에 의해 발생하는 예외 클래스들 제공
 urllib.robotparser # robots.txt 파일을 구문 분석하는 기능 제공
 ```
 
+
 * urllib.request module: helps to define functions and classes to open URLs (mostly HTTP)
 > URL 문자열을 가지고 HTTP 요청을 수행. urlopen() 함수를 사용하여 웹 서버에 페이지를 요청하고, 서버로부터 받은 응답을 저장하여 응답 객체(http.client.HTTPResponse)를 반환. http.client.HTTPResponse 클래스는 웹 서버로부터 받은 응답을 래핑하는 객체로, 응답 헤더나 바디의 내용을 추출하는 메서드를 제공.
 ```python
@@ -36,9 +39,30 @@ http.client.HTTPResponse 객체의 read() 메서드를 실행하여 웹 서버�
 웹 서버가 한글을 포함한 텍스트 형식의 HTML 문서를 읽을 때에는 텍스트 형식으로 변환 -> read().decode('utf-8')
 크롤링하려는 웹 페이지가 어떠한 문자 셋으로 작성되었는지 파악하려면 소스에서 <meta> 태그의 charset 정보를 체크하면 됨.
 혹은, 파이썬 프로그램으로도 파악할 수 있음. http.client.HTTPResponse객체의 info() 메서드를 호출하면 http.client.HTTPMessage 객체가 리턴 됨.
-웹 서버로부터 전달되는 Content-Type이라는 응답 헤더 정보를 읽고 해당 페이지의 문자 셋 정보를 추출해 줌 (encoding = doc.info().get_content_charset())
+웹 서버로부터 전달되는 Content-Type이라는 응답 헤더 정보를 읽고 해당 페이지의 문자 셋 정보를 추출해 줌
+```python
+request_url = urllib.request.urlopen('your_url')
+encoding = request_url.info().get_content_charset() # returns character set from header
+```
 
-* urllib.parse module: helps to define
+
+* urllib.parse module: helps to define functions to manipulate URLs and their components parts, to build or break them.
+> URL의 구문을 분석하기 위한 함수들이 정의. URL 문자열을 구성 요소(주소 지정 체계, 네트워크 위치, 경로 등)로 분리 및 구성 요소를 다시 URL로 결합. urlparse() 함수를 사용하여 아규먼트에 지정된 URL 문자열의 정보를 재구성하여 저장하는 urllib.parse.ParseResult 객체를 반환. 각 속성들을 이용하여 필요한 정보만 추출 가능.
+```python
+parse_url = urllib.parse.urlparse('your_url', scheme='', allow_fragments=True)
+```
+'your_url' 부분(urlstring 인자)에는 분석할 URL을 문자열로 입력, scheme 인자에는 URL의 scheme을 지정, allow_fragments 인자에는 fragment 식별자의 정의 여부를 지정.
+
+```python
+# 다음 영화 사이트 예시
+url1 = urlparse('https://movie.daum.net/moviedb/main?movieId=93252')
+# 결과: ParseResult(scheme='https', netloc='movie.daum.net', path='/moviedb/main', params='', query='movieId=93252', fragment='')
+
+url1.netloc
+url1.path
+url1.query,
+url1.geturl()
+```
 
 
 ## Solutions When Blocked (TimeoutException)
