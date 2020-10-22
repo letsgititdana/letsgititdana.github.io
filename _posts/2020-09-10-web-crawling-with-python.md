@@ -29,17 +29,18 @@ urllib.robotparser # robots.txt 파일을 구문 분석하는 기능 제공
 
 * urllib.request module: helps to define functions and classes to open URLs (mostly HTTP)
 > URL 문자열을 가지고 HTTP 요청을 수행. urlopen() 함수를 사용하여 웹 서버에 페이지를 요청하고, 서버로부터 받은 응답을 저장하여 응답 객체(http.client.HTTPResponse)를 반환. http.client.HTTPResponse 클래스는 웹 서버로부터 받은 응답을 래핑하는 객체로, 응답 헤더나 바디의 내용을 추출하는 메서드를 제공.
+
 ```python
 import urllib.request
 request_url = urllib.request.urlopen('your_url')
 print(request_url.read()) # prints the source code of the URL.
 ```
-
 http.client.HTTPResponse 객체의 read() 메서드를 실행하여 웹 서버가 전달한 데이터(응답 바디)를 바이트 열로 읽어 들임.
 웹 서버가 한글을 포함한 텍스트 형식의 HTML 문서를 읽을 때에는 텍스트 형식으로 변환 -> read().decode('utf-8')
 크롤링하려는 웹 페이지가 어떠한 문자 셋으로 작성되었는지 파악하려면 소스에서 <meta> 태그의 charset 정보를 체크하면 됨.
 혹은, 파이썬 프로그램으로도 파악할 수 있음. http.client.HTTPResponse객체의 info() 메서드를 호출하면 http.client.HTTPMessage 객체가 리턴 됨.
 웹 서버로부터 전달되는 Content-Type이라는 응답 헤더 정보를 읽고 해당 페이지의 문자 셋 정보를 추출해 줌
+
 ```python
 request_url = urllib.request.urlopen('your_url')
 encoding = request_url.info().get_content_charset() # returns character set from header
@@ -48,6 +49,7 @@ encoding = request_url.info().get_content_charset() # returns character set from
 
 * urllib.parse module: helps to define functions to manipulate URLs and their components parts, to build or break them.
 > URL의 구문을 분석하기 위한 함수들이 정의. URL 문자열을 구성 요소(주소 지정 체계, 네트워크 위치, 경로 등)로 분리 및 구성 요소를 다시 URL로 결합. urlparse() 함수를 사용하여 아규먼트에 지정된 URL 문자열의 정보를 재구성하여 저장하는 urllib.parse.ParseResult 객체를 반환. 각 속성들을 이용하여 필요한 정보만 추출 가능.
+
 ```python
 parse_url = urllib.parse.urlparse('your_url', scheme='', allow_fragments=True)
 ```
@@ -63,6 +65,8 @@ url1.path
 url1.query,
 url1.geturl()
 ```
+
+## TO BE ADDED
 
 
 ## Solutions When Blocked (TimeoutException)
