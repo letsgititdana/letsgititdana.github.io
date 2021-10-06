@@ -1,7 +1,7 @@
 ---
 title: "WEB CRAWLING WITH PYTHON"
 date: 2020-09-10 10:45:00 -0400
-categories: crawling
+categories: Crawling
 ---
 
 # Web Crawling with Python
