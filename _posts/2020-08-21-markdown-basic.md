@@ -1,7 +1,7 @@
 ---
 title: "MARKDOWN"
 date: 2020-08-21 10:45:00 -0400
-categories: markdown
+categories: Markdown
 ---
 
 # Markdown
