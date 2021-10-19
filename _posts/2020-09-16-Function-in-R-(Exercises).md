@@ -1,7 +1,8 @@
 ---
 title: "FUNCTION IN R (EXERCISES)"
 date: 2020-09-16 10:45:00 -0400
-categories: R
+categories:
+  - 
 ---
 
 
